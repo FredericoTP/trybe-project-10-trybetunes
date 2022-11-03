@@ -21,7 +21,7 @@ class App extends React.Component {
     inputName: '',
     isBtnDisabled: true,
     log: false,
-    isLoading: true,
+    isLoading: false,
   };
 
   handleChange = ({ target }) => {
@@ -40,10 +40,10 @@ class App extends React.Component {
   };
 
   btnSaveUser = (event) => {
-    this.saveUser();
     this.setState({
-      log: true,
+      isLoading: true,
     });
+    this.saveUser();
     event.preventDefault();
   };
 
@@ -52,6 +52,7 @@ class App extends React.Component {
     await createUser({ name: inputName });
     this.setState({
       isLoading: false,
+      log: true,
     });
   }
 

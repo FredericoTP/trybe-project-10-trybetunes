@@ -1,14 +1,11 @@
 import React from 'react';
-import Loading from '../components/Loading';
+import Header from '../components/Header';
 
 class Search extends React.Component {
   render() {
-    const { isLoading } = this.props;
-    if (isLoading) {
-      return <Loading />;
-    }
     return (
       <div data-testid="page-search">
+        <Header />
         <p>Search</p>
       </div>
     );

@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Loading from '../components/Loading';
 
 class Login extends React.Component {
   render() {
-    const { inputName, handleChange, isBtnDisabled, btnSaveUser } = this.props;
+    const { inputName, handleChange, isBtnDisabled, btnSaveUser, isLoading } = this.props;
+
+    if (isLoading) {
+      return <Loading />;
+    }
     return (
       <div data-testid="page-login">
         <p>TrybeTunes</p>
@@ -40,6 +45,7 @@ Login.propTypes = {
   handleChange: PropTypes.func.isRequired,
   isBtnDisabled: PropTypes.bool.isRequired,
   btnSaveUser: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
 };
 
 export default Login;
