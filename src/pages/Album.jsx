@@ -11,7 +11,6 @@ class Album extends React.Component {
     name: '',
     collection: '',
     isLoading: true,
-    // check: false,
   };
 
   async componentDidMount() {
@@ -26,15 +25,6 @@ class Album extends React.Component {
       isLoading: false,
     });
   }
-
-  // handleChange = ({ target }) => {
-  //   const { name } = target;
-  //   const value = target.type === 'checkbox' ? target.checked : target.value;
-
-  //   this.setState({
-  //     [name]: value,
-  //   });
-  // };
 
   render() {
     const { musics, name, collection, isLoading } = this.state;
@@ -60,6 +50,7 @@ class Album extends React.Component {
                       trackName={ music.trackName }
                       previewUrl={ music.previewUrl }
                       trackId={ music.trackId }
+                      isLoading={ isLoading }
                     />
                   </div>
                 );
