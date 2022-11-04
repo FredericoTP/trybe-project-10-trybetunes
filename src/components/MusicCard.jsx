@@ -60,7 +60,7 @@ class MusicCard extends React.Component {
 
   render() {
     const { isLoading, check } = this.state;
-    const { trackName, previewUrl, trackId } = this.props;
+    const { trackName, previewUrl, trackId, clickOnCheck } = this.props;
     if (isLoading) {
       return (
         <Loading />
@@ -83,6 +83,7 @@ class MusicCard extends React.Component {
             name="check"
             onChange={ this.handleChange }
             checked={ check }
+            onClick={ clickOnCheck }
           />
         </label>
       </>
