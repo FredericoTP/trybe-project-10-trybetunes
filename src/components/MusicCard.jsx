@@ -1,39 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import { addSong } from '../services/favoriteSongsAPI';
 
 class MusicCard extends React.Component {
   render() {
-    const { musics } = this.props;
+    const { trackName, previewUrl, trackId } = this.props;
     return (
-      <div>
-        {
-          musics.map((music) => {
-            const { trackName, trackId, previewUrl } = music;
-            if (previewUrl) {
-              return (
-                <div key={ trackId }>
-                  <p>{ trackName }</p>
-                  <audio data-testid="audio-component" src={ previewUrl } controls>
-                    <track kind="captions" />
-                    <code>audio</code>
-                  </audio>
-                </div>
-              );
-            }
-            return '';
-          })
-        }
-      </div>
+      <>
+        <p>{ trackName }</p>
+        <audio data-testid="audio-component" src={ previewUrl } controls>
+          <track kind="captions" />
+          <code>audio</code>
+        </audio>
+        <label htmlFor={ trackId }>
+          Favorita
+          <input
+            data-testid={ `checkbox-music-${trackId}` }
+            type="checkbox"
+            id={ trackId }
+          />
+        </label>
+      </>
     );
   }
 }
 
 MusicCard.propTypes = {
-  musics: PropTypes.arrayOf(PropTypes.shape({
-    trackName: PropTypes.string,
-    trackId: PropTypes.number,
-    previewUrl: PropTypes.string,
-  })).isRequired,
+  trackName: PropTypes.string.isRequired,
+  trackId: PropTypes.number.isRequired,
+  previewUrl: PropTypes.string.isRequired,
 };
 
 export default MusicCard;
