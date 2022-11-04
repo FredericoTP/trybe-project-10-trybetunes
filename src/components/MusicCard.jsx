@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { addSong } from '../services/favoriteSongsAPI';
+import { addSong, removeSong } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
 
 class MusicCard extends React.Component {
   constructor() {
     super();
-    this.addSongFavorite = this.addSongFavorite.bind(this);
+    this.addAndRemoveSongFavorite = this.addAndRemoveSongFavorite.bind(this);
   }
 
   state = {
@@ -28,7 +28,7 @@ class MusicCard extends React.Component {
       isLoading: true,
     });
 
-    this.addSongFavorite();
+    this.addAndRemoveSongFavorite();
   };
 
   verifyFavorite = (name, id, array) => {
@@ -43,11 +43,16 @@ class MusicCard extends React.Component {
     });
   };
 
-  async addSongFavorite() {
+  async addAndRemoveSongFavorite() {
     const { check } = this.state;
     if (!check) {
       await addSong(this.props);
     }
+
+    if (check) {
+      await removeSong(this.props);
+    }
+
     this.setState({
       isLoading: false,
     });
