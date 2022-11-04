@@ -100,6 +100,7 @@ MusicCard.propTypes = {
     trackId: PropTypes.number,
     previewUrl: PropTypes.string,
   })).isRequired,
+  clickOnCheck: PropTypes.func.isRequired,
 };
 
 export default MusicCard;
