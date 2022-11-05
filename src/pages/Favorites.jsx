@@ -18,7 +18,6 @@ class Favorites extends React.Component {
 
   async componentDidMount() {
     const response = await getFavoriteSongs();
-
     this.setState({
       isLoading: false,
       favoriteMusics: response,
@@ -34,7 +33,6 @@ class Favorites extends React.Component {
 
   async getSongs() {
     const response = await getFavoriteSongs();
-
     this.setState({
       favoriteMusics: response,
       click: false,
@@ -48,9 +46,8 @@ class Favorites extends React.Component {
   };
 
   render() {
-    const { isLoading, favoriteMusics } = this.state;
-
-    if (isLoading) {
+    const { isLoading, favoriteMusics, click } = this.state;
+    if (isLoading || click) {
       return (
         <div>
           <Header />
@@ -58,6 +55,7 @@ class Favorites extends React.Component {
         </div>
       );
     }
+
     return (
       <div data-testid="page-favorites">
         <Header />
@@ -70,7 +68,7 @@ class Favorites extends React.Component {
                   <MusicCard
                     trackName={ trackName }
                     previewUrl={ previewUrl }
-                    trackId={ trackId }
+                    trackId={ +trackId }
                     favoriteMusics={ favoriteMusics }
                     clickOnCheck={ this.clickOnCheck }
                   />

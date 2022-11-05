@@ -46,11 +46,13 @@ class MusicCard extends React.Component {
   async addAndRemoveSongFavorite() {
     const { check } = this.state;
     if (!check) {
-      await addSong(this.props);
+      const { trackName, previewUrl, trackId } = this.props;
+      await addSong({ trackName, previewUrl, trackId });
     }
 
     if (check) {
-      await removeSong(this.props);
+      const { trackName, previewUrl, trackId } = this.props;
+      await removeSong({ trackName, previewUrl, trackId });
     }
 
     this.setState({
@@ -97,10 +99,13 @@ MusicCard.propTypes = {
   previewUrl: PropTypes.string.isRequired,
   favoriteMusics: PropTypes.arrayOf(PropTypes.shape({
     trackName: PropTypes.string,
-    trackId: PropTypes.number,
     previewUrl: PropTypes.string,
   })).isRequired,
-  clickOnCheck: PropTypes.func.isRequired,
+  clickOnCheck: PropTypes.func,
+};
+
+MusicCard.defaultProps = {
+  clickOnCheck: null,
 };
 
 export default MusicCard;
