@@ -14,7 +14,7 @@ class ProfileEdit extends React.Component {
 
   state = {
     isLoading: true,
-    isBtnDisabled: true,
+    isBtnDisabled: false,
     name: '',
     email: '',
     image: '',
@@ -61,22 +61,22 @@ class ProfileEdit extends React.Component {
   };
 
   handleButton = (event) => {
-    const { history } = this.props;
     event.preventDefault();
     this.setState({
       isLoading: true,
     });
     this.userUpdate();
-    history.push('/profile');
   };
 
   async userUpdate() {
+    const { history } = this.props;
     const { name, email, image, description } = this.state;
     const object = { name, email, image, description };
     await updateUser(object);
     this.setState({
       isLoading: false,
     });
+    history.push('/profile');
   }
 
   render() {

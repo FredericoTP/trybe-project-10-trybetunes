@@ -22,7 +22,6 @@ class Profile extends React.Component {
   render() {
     const { isLoading, user } = this.state;
     const { name, email, image, description } = user;
-    // console.log(user);
     if (isLoading) {
       return (
         <div>
