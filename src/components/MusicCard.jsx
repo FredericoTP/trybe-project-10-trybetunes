@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { addSong, removeSong } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
+import '../style/MusicCard.css';
 
 class MusicCard extends React.Component {
   constructor() {
@@ -70,15 +71,15 @@ class MusicCard extends React.Component {
     }
 
     return (
-      <>
-        <p>{ trackName }</p>
+      <div className="music-track">
+        <p className="music-name">{ trackName }</p>
         <audio data-testid="audio-component" src={ previewUrl } controls>
           <track kind="captions" />
           <code>audio</code>
         </audio>
-        <label htmlFor={ trackId }>
-          Favorita
+        <div className="form-check space-check">
           <input
+            className="form-check-input"
             data-testid={ `checkbox-music-${trackId}` }
             type="checkbox"
             id={ trackId }
@@ -87,8 +88,14 @@ class MusicCard extends React.Component {
             checked={ check }
             onClick={ clickOnCheck }
           />
-        </label>
-      </>
+          <label
+            className="form-check-label"
+            htmlFor={ trackId }
+          >
+            Favorita
+          </label>
+        </div>
+      </div>
     );
   }
 }

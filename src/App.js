@@ -8,6 +8,7 @@ import Favorites from './pages/Favorites';
 import NotFound from './pages/NotFound';
 import ProfileEdit from './pages/ProfileEdit';
 import { createUser } from './services/userAPI';
+import './style/App.css';
 
 const NUMBER_3 = 3;
 
