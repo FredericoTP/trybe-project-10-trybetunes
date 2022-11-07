@@ -1,19 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import '../style/ListAlbums.css';
 
 class ListAlbums extends React.Component {
   render() {
     const { albums, btnClicked, nameArtist } = this.props;
     if (btnClicked && albums.length > 0) {
       return (
-        <div>
-          <h4>
-            Resultado de álbuns de:
-            {' '}
-            { nameArtist }
-          </h4>
-          <div>
+        <div className="listAlbums">
+          <div className="listAlbums-h4">
+            <h4>
+              Resultado de álbuns de:
+              {' '}
+              { nameArtist }
+            </h4>
+          </div>
+          <div className="listAlbums-albums">
             {
               albums.map((album) => {
                 const {
@@ -24,11 +27,12 @@ class ListAlbums extends React.Component {
                   collectionId,
                 } = album;
                 return (
-                  <div key={ `${artistId}-${collectionName}` }>
+                  <div key={ `${artistId}-${collectionName}` } className="album">
                     <img src={ artworkUrl100 } alt={ name } />
-                    <p>{ collectionName }</p>
-                    <p>{ name }</p>
+                    <p className="text-font-album">{ collectionName }</p>
+                    <p className="text-font-album">{ name }</p>
                     <Link
+                      className="btn btn-outline-dark link-album"
                       data-testid={ `link-to-album-${collectionId}` }
                       to={ `/album/${collectionId}` }
                     >
@@ -45,7 +49,9 @@ class ListAlbums extends React.Component {
 
     if (btnClicked && albums.length === 0) {
       return (
-        <h2>Nenhum álbum foi encontrado</h2>
+        <div className="text-font-album">
+          <h2>Nenhum álbum foi encontrado</h2>
+        </div>
       );
     }
   }

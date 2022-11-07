@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import { getUser, updateUser } from '../services/userAPI';
+import '../style/ProfileEdit.css';
 
 const NUMBER_3 = 3;
 
@@ -91,73 +92,105 @@ class ProfileEdit extends React.Component {
 
     if (isLoading) {
       return (
-        <div>
-          <Header />
-          <Loading />
+        <div className="profileEdit-loading">
+          <div className="profileEdit-loading-header">
+            <Header />
+          </div>
+          <div className="profileEdit-loading-loading">
+            <Loading />
+          </div>
         </div>
       );
     }
 
     return (
-      <div data-testid="page-profile-edit">
-        <Header />
+      <div data-testid="page-profile-edit" className="page-profile-edit">
         <div>
-          <form>
-            <label htmlFor="edit-input-name">
-              Nome
-              <input
-                name="name"
-                data-testid="edit-input-name"
-                id="edit-input-name"
-                type="text"
-                value={ name }
-                onChange={ this.handleChange }
-              />
-            </label>
-            <label htmlFor="edit-input-email">
-              Email
-              <input
-                name="email"
-                data-testid="edit-input-email"
-                id="edit-input-email"
-                type="email"
-                value={ email }
-                onChange={ this.handleChange }
-              />
-            </label>
-            <label htmlFor="edit-input-description">
-              Descrição
-              <textarea
-                name="description"
-                data-testid="edit-input-description"
-                id="edit-input-description"
-                cols="20"
-                rows="5"
-                value={ description }
-                onChange={ this.handleChange }
-              />
-            </label>
-            <label htmlFor="edit-input-image">
-              Imagem
-              <input
-                name="image"
-                data-testid="edit-input-image"
-                id="edit-input-image"
-                type="text"
-                value={ image }
-                onChange={ this.handleChange }
-              />
-            </label>
-            <button
-              data-testid="edit-button-save"
-              type="submit"
-              disabled={ isBtnDisabled }
-              onClick={ this.handleButton }
-            >
-              Salvar
-            </button>
-          </form>
+          <Header />
         </div>
+        <form className="page-profile-form">
+          <div className="mb-3">
+            <label
+              className="form-label profileEdit-text"
+              htmlFor="edit-input-name"
+            >
+              Nome
+            </label>
+            <input
+              className="form-control"
+              name="name"
+              data-testid="edit-input-name"
+              id="edit-input-name"
+              type="text"
+              placeholder="Seu nome"
+              value={ name }
+              onChange={ this.handleChange }
+            />
+          </div>
+          <div className="mb-3">
+            <label
+              className="form-label profileEdit-text"
+              htmlFor="edit-input-email"
+            >
+              Email
+            </label>
+            <input
+              className="form-control"
+              name="email"
+              data-testid="edit-input-email"
+              id="edit-input-email"
+              type="email"
+              placeholder="Seu email"
+              value={ email }
+              onChange={ this.handleChange }
+            />
+          </div>
+          <div className="mb-3">
+            <label
+              className="form-label profileEdit-text"
+              htmlFor="edit-input-description"
+            >
+              Descrição
+            </label>
+            <textarea
+              className="form-control profileEdit-textarea"
+              name="description"
+              data-testid="edit-input-description"
+              id="edit-input-description"
+              rows="5"
+              placeholder="Sua descrição"
+              value={ description }
+              onChange={ this.handleChange }
+            />
+          </div>
+          <div className="mb-3">
+            <label
+              className="form-label profileEdit-text"
+              htmlFor="edit-input-image"
+            >
+              Imagem
+            </label>
+            <input
+              className="form-control"
+              name="image"
+              data-testid="edit-input-image"
+              id="edit-input-image"
+              type="text"
+              placeholder="Link da imagem"
+              value={ image }
+              onChange={ this.handleChange }
+            />
+          </div>
+          <button
+            className="btn btn-dark profileEdit-text"
+            data-testid="edit-button-save"
+            type="submit"
+            disabled={ isBtnDisabled }
+            onClick={ this.handleButton }
+          >
+            Salvar
+          </button>
+        </form>
       </div>
     );
   }

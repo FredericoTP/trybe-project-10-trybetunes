@@ -1,0 +1,29 @@
+.favorites-loading {
+  background-image: linear-gradient(to right top, #eec5ee, #dacffe, #c2d9ff, #aee2ff, #a2e9ff, #99eefe, #92f3fb, #8ff8f5, #8ffbe9, #97feda, #a5ffc9, #b7ffb7);
+  height: 100vh;
+  width: 100%;
+}
+
+.favorites-loading-header {
+  position: absolute;
+  width: 100%;
+}
+
+.favorites-loading-loading {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.page-favorites {
+  background-image: linear-gradient(to right top, #eec5ee, #dacffe, #c2d9ff, #aee2ff, #a2e9ff, #99eefe, #92f3fb, #8ff8f5, #8ffbe9, #97feda, #a5ffc9, #b7ffb7);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.favorites-musics {
+  margin: 0 auto;
+  padding: 10px 0 30px;
+  width: 80%;
+}

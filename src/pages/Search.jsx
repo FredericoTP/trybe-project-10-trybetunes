@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import ListAlbums from '../components/ListAlbums';
 import Loading from '../components/Loading';
+import '../style/Search.css';
 
 const NUMBER_2 = 2;
 
@@ -69,41 +70,49 @@ class Search extends React.Component {
 
     if (isLoading) {
       return (
-        <div>
-          <Header />
-          <Loading />
+        <div className="search-loading">
+          <div className="search-loading-header">
+            <Header />
+          </div>
+          <div className="search-loading-loading">
+            <Loading />
+          </div>
         </div>
       );
     }
     return (
-      <div data-testid="page-search">
-        <Header />
-        <p>Search</p>
-        <div>
-          <input
-            data-testid="search-artist-input"
-            name="inputSearch"
-            type="text"
-            placeholder="Nome do Artista"
-            value={ inputSearch }
-            onChange={ this.handleChange }
-          />
-          <button
-            data-testid="search-artist-button"
-            type="button"
-            disabled={ isBtnSearchDisabled }
-            onClick={ this.handleClickBtn }
-          >
-            Pesquisar
-          </button>
-        </div>
-        <div>
-          <ListAlbums
-            inputSearch={ inputSearch }
-            albums={ albums }
-            btnClicked={ btnClicked }
-            nameArtist={ nameArtist }
-          />
+      <div data-testid="page-search" className="search-container">
+        <div className="search-result">
+          <Header />
+          <div className="input-group mb-3 search-camp">
+            <input
+              className="form-control"
+              data-testid="search-artist-input"
+              name="inputSearch"
+              type="text"
+              placeholder="Nome do Artista"
+              value={ inputSearch }
+              onChange={ this.handleChange }
+            />
+            <button
+              className="btn btn-outline-secondary"
+              id="button-addon2"
+              data-testid="search-artist-button"
+              type="button"
+              disabled={ isBtnSearchDisabled }
+              onClick={ this.handleClickBtn }
+            >
+              Pesquisar
+            </button>
+          </div>
+          <div>
+            <ListAlbums
+              inputSearch={ inputSearch }
+              albums={ albums }
+              btnClicked={ btnClicked }
+              nameArtist={ nameArtist }
+            />
+          </div>
         </div>
       </div>
     );

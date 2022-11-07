@@ -1,0 +1,30 @@
+.page-header {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.title-header h1 {
+  font-weight: 800;
+}
+
+.links {
+  box-shadow: 2px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-family: Montserrat Alternates , sans-serif;
+  margin: 0 5px;
+}
+
+.textFont {
+  font-family: Montserrat Alternates , sans-serif;
+  margin: 0;
+}
+
+.h3 {
+  font-weight: 800;
+}
+
+.image-header {
+  width: 150px;
+}
