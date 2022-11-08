@@ -23,7 +23,6 @@ class Album extends React.Component {
     const response = await getMusics(params.id);
 
     const responseFav = await getFavoriteSongs();
-    console.log(response);
     this.setState({
       imageAlbum: response[0].artworkUrl100,
       musics: response,
