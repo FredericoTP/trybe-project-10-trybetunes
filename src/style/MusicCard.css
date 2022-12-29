@@ -31,6 +31,25 @@
   margin: 0 0 0 10px;
 }
 
+@media screen and ( max-width : 1024px ) {
+
+  .music-track {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px auto;
+    width: 90%;
+  }
+
+  .music-name {
+    text-align: center;
+  }
+
+  .space-check {
+    margin: 5px;
+  }
+}
+
 @media screen and ( max-width : 400px ) {
 
   .music-track {

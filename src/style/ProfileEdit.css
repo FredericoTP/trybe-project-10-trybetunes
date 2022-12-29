@@ -47,6 +47,13 @@
   resize: none;
 }
 
+@media screen and ( max-width : 1024px ) {
+
+  .page-profile-form {
+    width: 70%;
+  }
+}
+
 @media screen and ( max-width : 400px ) {
 
   .page-profile-form {

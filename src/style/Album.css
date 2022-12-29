@@ -52,6 +52,25 @@
   font-family: Montserrat Alternates , sans-serif;
 }
 
+@media screen and ( max-width : 1024px ) {
+
+  .album-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .album-info {
+    margin: 10px 0;
+    width: 50%;
+  }
+
+  .album-info h2, .album-info p {
+    text-align: center;
+  }
+}
+
 @media screen and ( max-width : 400px ) {
 
   .album-content {

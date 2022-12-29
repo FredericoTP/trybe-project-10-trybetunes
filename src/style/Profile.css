@@ -61,6 +61,13 @@
   word-break: break-all;
 }
 
+@media screen and ( max-width : 1024px ) {
+
+  .page-profile-content {
+    width: 70%;
+  }
+}
+
 @media screen and ( max-width : 400px ) {
 
   .page-profile-content {

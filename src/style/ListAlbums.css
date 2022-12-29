@@ -50,6 +50,25 @@
   margin: 0;
 }
 
+@media screen and ( max-width : 1024px ) {
+
+  .listAlbums-h4 h4 {
+    font-size: 20px;
+  }
+
+  .listAlbums-albums {
+    width: 100%;
+  }
+
+  .text-font-album, .link-album {
+    font-size: 10px;
+  }
+
+  .album {
+    width: 29%;
+  }
+}
+
 @media screen and ( max-width : 400px ) {
 
   .listAlbums-h4 h4 {
