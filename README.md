@@ -349,6 +349,8 @@ Crie o formulário de edição de perfil dentro do componente <code>ProfileEdit<
 
 ## 100% :heavy_check_mark:
 
+![Project-TrybeTunes-Grade](https://github.com/FredericoTP/trybe-project-10-trybetunes/blob/main/images/trybetunes-grade.png?raw=true)
+  
 <br />
 
 ## 3- Preview
