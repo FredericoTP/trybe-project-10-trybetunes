@@ -62,3 +62,18 @@
   height: 100vh;
   justify-content: center;
 }
+
+@media screen and ( max-width : 400px ) {
+
+  .login-title {
+    text-align: center;
+  }
+
+  .img-login {
+    width: 60%;
+  }
+
+  .login2 {
+    width: 80%;
+  }
+}

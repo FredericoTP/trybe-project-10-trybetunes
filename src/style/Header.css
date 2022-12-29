@@ -28,3 +28,52 @@
 .image-header {
   width: 150px;
 }
+
+@media screen and ( max-width : 1024px ) {
+
+  .links-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 10px;
+  }
+
+  .links {
+    font-size: 15px;
+  }
+
+  .h3 {
+    font-size: 19px;
+  }
+}
+
+@media screen and ( max-width : 400px ) {
+
+  .page-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title-header {
+    margin: 0 0 10px;
+  }
+
+  .links-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 10px;
+  }
+
+  .links {
+    font-size: 10px;
+  }
+
+  .image-header {
+    width: 100px;
+  }
+
+  .h3 {
+    font-size: 17px;
+  }
+}

@@ -1,3 +1,4 @@
+/* stylelint-disable max-line-length */
 .profile-loading {
   background-image: linear-gradient(to right top, #eec5ee, #dacffe, #c2d9ff, #aee2ff, #a2e9ff, #99eefe, #92f3fb, #8ff8f5, #8ffbe9, #97feda, #a5ffc9, #b7ffb7);
   height: 100vh;
@@ -54,4 +55,22 @@
 .page-profile-name h2, .page-profile-email h2, .page-profile-description h2 {
   font-weight: 800;
   word-break: break-word;
+}
+
+.page-profile-name p, .page-profile-email p, .page-profile-description p {
+  word-break: break-all;
+}
+
+@media screen and ( max-width : 1024px ) {
+
+  .page-profile-content {
+    width: 70%;
+  }
+}
+
+@media screen and ( max-width : 400px ) {
+
+  .page-profile-content {
+    width: 90%;
+  }
 }
