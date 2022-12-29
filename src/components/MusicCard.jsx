@@ -67,7 +67,9 @@ class MusicCard extends React.Component {
     const { trackName, previewUrl, trackId, clickOnCheck } = this.props;
     if (isLoading) {
       return (
-        <Loading />
+        <div className="music-card-loading">
+          <Loading />
+        </div>
       );
     }
 

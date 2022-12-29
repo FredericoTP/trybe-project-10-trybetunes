@@ -39,3 +39,15 @@
 .btn-outline-secondary:hover {
   background-color: black;
 }
+
+@media screen and ( max-width : 400px ) {
+
+  .search-camp {
+    width: 70%;
+  }
+
+  .search-camp button, .search-camp input {
+    font-size: 10px;
+  }
+
+}

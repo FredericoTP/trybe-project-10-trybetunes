@@ -1,3 +1,4 @@
+/* stylelint-disable max-line-length */
 .profileEdit-loading {
   background-image: linear-gradient(to right top, #eec5ee, #dacffe, #c2d9ff, #aee2ff, #a2e9ff, #99eefe, #92f3fb, #8ff8f5, #8ffbe9, #97feda, #a5ffc9, #b7ffb7);
   height: 100vh;
@@ -44,4 +45,11 @@
 .profileEdit-textarea {
   font-family: Montserrat Alternates , sans-serif;
   resize: none;
+}
+
+@media screen and ( max-width : 400px ) {
+
+  .page-profile-form {
+    width: 90%;
+  }
 }
