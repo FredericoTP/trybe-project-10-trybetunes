@@ -1,10 +1,8 @@
-# :construction: README em construção ! :construction:
-
 # :computer: Trybe-10-Project-TrybeTunes :computer:
 
 Nesse projeto foi desenvolvida uma aplicação capaz de reproduzir músicas das mais variadas bandas e artistas, criar uma lista de músicas favoritas e editar o perfil da pessoa usuária logada.
 
-# Acesse o projeto clicando [aqui]()! :green_heart:
+# Acesse o projeto clicando [aqui](https://fredericotp.github.io/trybe-project-10-trybetunes/)! :green_heart:
 
 <br />
 
@@ -354,3 +352,10 @@ Crie o formulário de edição de perfil dentro do componente <code>ProfileEdit<
 <br />
 
 ## 3- Preview
+
+![Project-TrybeTunes-Preview1](https://github.com/FredericoTP/trybe-project-10-trybetunes/blob/main/images/trybetunes-preview1.png?raw=true)
+  
+![Project-TrybeTunes-Preview2](https://github.com/FredericoTP/trybe-project-10-trybetunes/blob/main/images/trybetunes-preview2.png?raw=true)
+  
+![Project-TrybeTunes-Preview3](https://github.com/FredericoTP/trybe-project-10-trybetunes/blob/main/images/trybetunes-preview3.png?raw=true)
+  
