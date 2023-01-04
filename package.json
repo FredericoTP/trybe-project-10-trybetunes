@@ -1,5 +1,5 @@
 {
-  "homepage": "https://fredericotp.github.io/project-trybetunes/",
+  "homepage": "https://fredericotp.github.io/trybe-project-10-trybetunes/",
   "name": "trybetunes",
   "version": "1.0.1",
   "private": true,
@@ -18,8 +18,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
