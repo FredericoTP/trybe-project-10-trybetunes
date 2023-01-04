@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/trybe-project-10-trybetunes/static/css/main.46d67a57.css",
+    "main.js": "/trybe-project-10-trybetunes/static/js/main.5827ad6f.js",
+    "static/media/picwish.png": "/trybe-project-10-trybetunes/static/media/picwish.fde52784e815ccd6302e.png",
+    "index.html": "/trybe-project-10-trybetunes/index.html",
+    "main.46d67a57.css.map": "/trybe-project-10-trybetunes/static/css/main.46d67a57.css.map",
+    "main.5827ad6f.js.map": "/trybe-project-10-trybetunes/static/js/main.5827ad6f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46d67a57.css",
+    "static/js/main.5827ad6f.js"
+  ]
+}
